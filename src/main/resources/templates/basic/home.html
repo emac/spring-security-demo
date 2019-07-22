@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
+          href="../../static/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li><a th:href="@{/basic}" href="home.html"> Home </a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 th:text="${title}">Title</h1>
+    <div th:text="${message}">Fake content</div>
+    <div id="created" th:text="${#dates.format(date)}">July 21,
+        2019 2:17:16 PM CDT
+    </div>
+</div>
+</body>
+</html>
