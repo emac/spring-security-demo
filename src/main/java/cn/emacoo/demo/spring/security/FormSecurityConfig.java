@@ -29,6 +29,7 @@ public class FormSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // password: admin
         auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())
                 .withUser("admin").password("$2a$10$ZC.G/U5NR0WIzFbJRLiIvuzH7.1586NhurJN3BWsIDVOezDHkUhji").roles("ADMIN");
     }
